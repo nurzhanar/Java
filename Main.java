@@ -1,18 +1,24 @@
 package com.company;
-import java. lang. Math;
 
-class Main{
-    public static void main(String[] args){
-        Point1 Point1=new Point1();
-        Point2 Point2=new Point2();
-        Point1.setX1();
-        Point1.setY1();
-        Point2.setX2();
-        Point2.setY2();
+interface Employee{
+    public void getOverallIncome();
+    public void getJobStartDate();
+}
+class Student implements Employee{
+    public void getOverallIncome(){
+        System.out.println("Overall income 35000");
 
-        double distance = Math. sqrt((Point1.X1-Point2.X2)*(Point1.X1-Point2.X2)+(Point1.Y1-Point2.Y2)*(Point1.Y1-Point2.Y2));
-        System. out. print(distance);
+    }
+
+    public void getJobStartDate(){
+        System.out.println("start date 15.02.2012");
     }
 }
+public class Main {
 
-
+    public static void main(String[] args) {
+	Student Darina=new Student();
+	Darina.getJobStartDate();
+	Darina.getOverallIncome();
+    }
+}
